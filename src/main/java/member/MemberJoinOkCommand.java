@@ -22,7 +22,7 @@ public class MemberJoinOkCommand implements MemberInterface {
 		String address = request.getParameter("address")==null? "" : request.getParameter("address");
 		String email = request.getParameter("email")==null? "" : request.getParameter("email");
 		String job = request.getParameter("job")==null? "" : request.getParameter("job");
-		String alarm = request.getParameter("alarm")==null? "허용" : request.getParameter("alarm");
+		String alarm = request.getParameter("alarm")==null? "" : request.getParameter("alarm");
 		
 		// DB에 저장시킨자료중 not null 데이터는 Back End 체크시켜준다.
 		

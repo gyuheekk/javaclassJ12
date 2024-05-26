@@ -80,22 +80,53 @@
 .dropdown:hover .dropbtn {
     background-color: #ddd;
 }
+.dropbtn i.icon-spacing {
+    margin-left: 8px; /* 글씨와 아이콘 사이의 여백 설정 */
+}
 </style>
+<script>
+	'use scrict';
+	
+	function notLogin() {
+		alert("로그인이 필요한 서비스입니다.");
+		location.href = "${ctp}/MemberLogin.mem";
+	}
+</script>
 <div class="navbar">
-	<a href="#">예금</a>
-	<a href="#">출금</a>
-	<a href="#">대출</a>
-	<a href="#">카드발급</a>
-	<a href="#">계좌관리</a>
-	<a href="#">게시판</a>
+
+	<a href="${empty sMid ? 'javascript:notLogin()' : '#'}">예금</a>
+	<a href="${empty sMid ? 'javascript:notLogin()' : '#'}">출금</a>
+	
 	<div class="dropdown">
-  	<button class="dropbtn">마이페이지</button>
+  	<button class="dropbtn">대출<i class="fa-solid fa-caret-down icon-spacing"></i></button>
     	<div class="dropdown-content">
-	      <a href="#">내 프로필</a>
-	      <a href="#">설정</a>
-	      <a href="#">로그아웃</a>
+		  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">대출 상품 소개</a>
+		  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">대출 신청</a>
+		  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">내 대출 확인</a>
       </div>
-  </div>
+  	</div>
+  	
+	<div class="dropdown">
+  	<button class="dropbtn">카드발급<i class="fa-solid fa-caret-down icon-spacing"></i></button>
+    	<div class="dropdown-content">
+    	  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">카드 종류 소개</a>
+    	  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">카드 신청</a>
+    	  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">내 카드 확인</a>
+      </div>
+ 	</div>
+  
+    <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">계좌관리</a>
+    <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">게시판</a>
+	
+	<div class="dropdown">
+  	<button class="dropbtn">마이페이지<i class="fa-solid fa-caret-down icon-spacing"></i></button>
+    	<div class="dropdown-content">
+    	  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">내 프로필</a>
+    	  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">설정</a>
+    	  <a href="${empty sMid ? 'javascript:notLogin()' : '${ctp}/MemberLogout.mem'}">로그아웃</a>
+      </div>
+    </div>
+  
 </div>
 
 	<!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">

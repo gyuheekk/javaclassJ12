@@ -47,10 +47,17 @@
 <div id="header" class="jumbotron text-center" style="margin-bottom:0; background-color: white;">
   <img src="${pageContext.request.contextPath}/images/1.png" class="centered-image">
 </div>
-<script>
+<!-- <script>
 	$(function() {
 		$("#header").on("click",function(){
 			location.href = "http://192.168.50.60:9090/javaclassJ12/Main";
+		});
+	});
+</script> -->
+<script>
+	$(function() {
+		$("#header").on("click",function(){
+			location.href = "http://localhost:8080/javaclassJ12/Main";
 		});
 	});
 </script>

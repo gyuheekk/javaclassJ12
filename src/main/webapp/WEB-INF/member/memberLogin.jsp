@@ -56,7 +56,7 @@
       </table>
     </div>
     <div class="text-center mt-3">
-			<a href="#">아이디찾기</a> |
+			<a href="${ctp}/MemberFindId.mem">아이디찾기</a> |
 			<a href="#">비밀번호 재설정</a>
 		</div>
     <div class="text-center mt-4 move-right">
