@@ -51,6 +51,11 @@ public class AccountController extends HttpServlet {
 			command.execute(request, response);
 			viewPage = "/include/message.jsp";
 		}
+		else if(com.equals("/AccountHistory")) {
+			command = new AccountHistoryCommand();
+			command.execute(request, response);
+			viewPage += "/accountHistory.jsp";
+		}
 		else if(com.equals("/AccountFavorite")) {
 			viewPage += "/accountFavorite.jsp";
 		}

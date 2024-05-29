@@ -29,7 +29,7 @@ public class MemberDeleteCheckOkCommand implements MemberInterface {
 		
 		if(!vo.getPwd().substring(8).equals(pwd)) {
 			request.setAttribute("message", "비밀번호를 확인하세요.");
-			request.setAttribute("url", "MemberPwdCheck.mem");
+			request.setAttribute("url", "MemberDelete.mem");
 			return;
 		}
 		

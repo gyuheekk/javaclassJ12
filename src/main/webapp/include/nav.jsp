@@ -105,7 +105,7 @@
       </div>
 	</div>
 	
-  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">거래내역조회</a>
+  <a href="${empty sMid ? 'javascript:notLogin()' : '${ctp}/AccountHistory.acc'}">거래내역조회</a>
 	
 	<div class="dropdown">
   	<button class="dropbtn">대출신청<i class="fa-solid fa-caret-down icon-spacing"></i></button>

@@ -20,7 +20,7 @@ public class MemberLoginOkCommand implements MemberInterface {
 		MemberDAO dao = new MemberDAO();
 		
 		MemberVO vo = dao.getMemberIdCheck(mid);
-		
+		System.out.println("vo : " + vo);
 		// 아래로 회원 인증처리
 		if(vo.getPwd() == null || vo.getUserDel().equals("OK")) {
 			request.setAttribute("message", "입력하신 회원정보가 없습니다.\\n확인하고 다시 로그인하세요.");
