@@ -22,7 +22,7 @@ public class MemberJoinOkCommand implements MemberInterface {
 		String address = request.getParameter("address")==null? "" : request.getParameter("address");
 		String email = request.getParameter("email")==null? "" : request.getParameter("email");
 		String job = request.getParameter("job")==null? "" : request.getParameter("job");
-		String alarm = request.getParameter("alarm")==null? "" : request.getParameter("alarm");
+		String message = request.getParameter("message")==null? "" : request.getParameter("message");
 		
 		// DB에 저장시킨자료중 not null 데이터는 Back End 체크시켜준다.
 		
@@ -67,10 +67,12 @@ public class MemberJoinOkCommand implements MemberInterface {
 		vo.setAddress(address);
 		vo.setEmail(email);
 		vo.setJob(job);
-		vo.setAlarm(alarm);
-		vo.setAccountnumber(accountnumber);
+		vo.setMessage(message);
+		vo.setAccountNumber(accountnumber);
 		
 		int res = dao.setMemberJoinOk(vo);
+		
+		//int res = dao.setAccountCreate(vo);
 		
 		if(res != 0) {
 			request.setAttribute("message", "회원 가입되셨습니다.\\n다시 로그인해 주세요.");

@@ -13,6 +13,36 @@
     height: 200px;
     background: #aaa;
   }
+	.container {
+        text-align: center;
+    }
+  .box-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      margin-bottom: 40px; /* footer와의 간격을 위해 추가 */
+  }
+  .box {
+		  width: 300px; /* 네모의 너비를 더 크게 설정 */
+      height: 400px; /* 네모의 높이를 더 크게 설정 */
+      background-color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      transition: background-color 0.3s, transform 0.3s;
+      text-decoration: none;
+      color: black;
+  }
+  .box:hover {
+      background-color: #dcdcdc;
+      transform: translateY(-5px);
+  }
+   .container h4 {
+      text-align: left; /* h4 요소를 왼쪽으로 정렬 */
+      margin-left: 90px; /* 오른쪽으로 약간 이동 */
+	}
   </style>
 </head>
 
@@ -21,10 +51,18 @@
 <!-- 메뉴바(Nav) -->
 <%@ include file = "/include/nav.jsp" %>
 
-<!-- 여기서부터 베너 만들기 -->
+<!-- 여기서부터 메인화면 만들기 -->
 
+<div class="container">
+	<h4>GH은행의 추천상품을 확인해보세요</h4>
+		<div class="box-container">
+	    <a href="#" class="box">상품 1</a>
+	    <a href="#" class="box">상품 2</a>
+	    <a href="#" class="box">상품 3</a>
+		</div>
+</div>
 
-<!-- 베너 만들기 끝 -->
+<!-- 메인화면 만들기 끝 -->
 
 <%-- <div class="container" style="margin-top:30px">
   <div class="row">

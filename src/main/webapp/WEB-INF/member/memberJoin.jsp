@@ -40,6 +40,12 @@
     	let tel3 = myform.tel3.value.trim();
     	let tel = tel1 + "-" + tel2 + "-" + tel3;
     	
+    	let postcode = myform.postcode.value + " ";
+    	let roadAddress = myform.roadAddress.value + " ";
+    	let detailAddress = myform.detailAddress.value + " ";
+    	let extraAddress = myform.extraAddress.value + " ";
+    	let address = postcode + "/" + roadAddress + "/" + detailAddress + "/" + extraAddress;
+    	
     	/* if(!regMid.test(mid)) {
     		alert("아이디는 4~20자리의 영문 소/대문자와 숫자, 언더바(_)만 사용가능합니다.");
     		myform.mid.focus();
@@ -88,6 +94,7 @@
     	else {
     		myform.email.value = email;
     		myform.tel.value = tel;
+    		myform.address.value = address;
     		
     		myform.submit();
     	}
@@ -289,14 +296,14 @@
     </div>
     <div class="form-group">
       <div class="form-check-inline">
-        <span class="input-group-text">알림서비스</span>  &nbsp; &nbsp;
+        <span class="input-group-text">메세지서비스</span>  &nbsp; &nbsp;
         <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="userInfor" value="허용" checked/>허용
+          <input type="radio" class="form-check-input" name="message" value="허용" checked/>허용
         </label>
       </div>
       <div class="form-check-inline">
         <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="userInfor" value="비허용"/>비허용
+          <input type="radio" class="form-check-input" name="message" value="비허용"/>비허용
         </label>
       </div>
     </div>

@@ -6,10 +6,6 @@
 	pageContext.setAttribute("level", level);
 %>
 <style>
-	body {
-    font-family: Arial, sans-serif;
-}
-
 .navbar {
     display: flex;
     justify-content: center; /* 수평 방향 중앙 정렬 */
@@ -83,6 +79,12 @@
 .dropbtn i.icon-spacing {
     margin-left: 8px; /* 글씨와 아이콘 사이의 여백 설정 */
 }
+.navbar {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} 
 </style>
 <script>
 	'use scrict';
@@ -93,18 +95,26 @@
 	}
 </script>
 <div class="navbar">
-
-	<a href="${empty sMid ? 'javascript:notLogin()' : '#'}">예금</a>
-	<a href="${empty sMid ? 'javascript:notLogin()' : '#'}">출금</a>
 	
 	<div class="dropdown">
-  	<button class="dropbtn">대출<i class="fa-solid fa-caret-down icon-spacing"></i></button>
+  	<button class="dropbtn">입/출금<i class="fa-solid fa-caret-down icon-spacing"></i></button>
     	<div class="dropdown-content">
-		  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">대출 상품 소개</a>
-		  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">대출 신청</a>
-		  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">내 대출 확인</a>
+				<a href="${empty sMid ? 'javascript:notLogin()' : '${ctp}/AccountDeposit.acc'}">입금</a>
+			  <a href="${empty sMid ? 'javascript:notLogin()' : '${ctp}/AccountWithdraw.acc'}">출금</a>
+			  <a href="${empty sMid ? 'javascript:notLogin()' : '${ctp}/AccountTransfer.acc'}">계좌이체</a>
       </div>
-  	</div>
+	</div>
+	
+  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">거래내역조회</a>
+	
+	<div class="dropdown">
+  	<button class="dropbtn">대출신청<i class="fa-solid fa-caret-down icon-spacing"></i></button>
+    	<div class="dropdown-content">
+			  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">대출 상품 소개</a>
+			  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">대출 신청</a>
+			  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">내 대출 확인</a>
+      </div>
+	</div>
   	
 	<div class="dropdown">
   	<button class="dropbtn">카드발급<i class="fa-solid fa-caret-down icon-spacing"></i></button>
@@ -114,15 +124,23 @@
     	  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">내 카드 확인</a>
       </div>
  	</div>
+ 	
+	<div class="dropdown">
+  	<button class="dropbtn">게시판<i class="fa-solid fa-caret-down icon-spacing"></i></button>
+    	<div class="dropdown-content">
+    	  <a href="${empty sMid ? 'javascript:notLogin()' : '${ctp}/BoardList.bo'}">전체게시판</a>
+    	  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">공지사항</a>
+    	  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">이벤트</a>
+    	  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">문의사항</a>
+      </div>
+ 	</div>
   
-    <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">계좌관리</a>
-    <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">게시판</a>
-	
 	<div class="dropdown">
   	<button class="dropbtn">마이페이지<i class="fa-solid fa-caret-down icon-spacing"></i></button>
     	<div class="dropdown-content">
-    	  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">내 프로필</a>
-    	  <a href="${empty sMid ? 'javascript:notLogin()' : '#'}">설정</a>
+    	  <a href="${empty sMid ? 'javascript:notLogin()' : '${ctp}/MemberMyProfile.mem'}">내 프로필 보기</a>
+    	  <a href="${empty sMid ? 'javascript:notLogin()' : '${ctp}/MemberPwdCheck.mem'}">내 프로필 수정</a>
+    	  <a href="${empty sMid ? 'javascript:notLogin()' : '${ctp}/MemberDelete.mem'}">회원 탈퇴</a>
     	  <a href="${empty sMid ? 'javascript:notLogin()' : '${ctp}/MemberLogout.mem'}">로그아웃</a>
       </div>
     </div>

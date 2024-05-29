@@ -29,7 +29,8 @@
   }
   .move-right {
     position: relative;
-    right: -170px; /* -a(-값이 커질수록 오른쪽으로 이동) */
+    right: -170px;
+   /* -a(-값이 커질수록 오른쪽으로 이동) */
   }
 </style>
 </head>
@@ -42,15 +43,11 @@
       <table class="table table-bordered" style="width:600px; margin:0 auto">
 	      <tr>
 		    	<td>
-			      <input type="text" name="mid" placeholder="아이디 입력" autofocus required class="form-control"/>
+			      <input type="text" name="mid" value="admin" placeholder="아이디 입력" autofocus required class="form-control mt-3 mb-3"/>
+			      <input type="password" name="pwd" value="1234" placeholder="비밀번호 입력" required class="form-control mb-3"/>
 		    	</td>
 		    	<td rowspan="2">
-			      <button type="submit" class="btn btn-primary" style="width: 100%; height: 100px;">로그인</button>
-		    	</td>
-		  		</tr>
-		  		<tr>
-		    	<td>
-			      <input type="password" name="pwd" placeholder="비밀번호 입력" required class="form-control"/>
+			      <button type="submit" class="btn btn-primary mt-2" style="width: 100%; height: 100px;">로그인</button>
 		    	</td>
 	  		</tr>
       </table>

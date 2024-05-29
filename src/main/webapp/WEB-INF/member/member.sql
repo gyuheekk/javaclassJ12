@@ -11,14 +11,13 @@ create table member (
   address   		varchar(100),															/* 주소(다음 API 활용) */
   email					varchar(60) not null,		  								/* 이메일(아이디/비밀번호 분실시에 사용)-형식체크필수 */
   job						varchar(20),															/* 직업 */
-  alarm         varchar(3) not null default '허용',					/* 알람 허용 여부 */
+  message         varchar(3) not null default '허용',				/* 메세지 허용 여부 */
   userDel   		char(2)  default 'NO',										/* 회원 탈퇴신청여부(NO:현재 활동중, OK:탈퇴신청중) */
-  level     		int default 1,														/* 회원등급(0:관리자, 1:준회원, 2:정회원, 3:우수회원, (4:운영자)) , 99:탈퇴신청회원 */
+  level     		int default 4,														/* 회원등급(0:관리자, 1:VVIP(10억원이상), 2:VIP(3억원이상), 3:우수회원(5000만원이상), 4:일반회원(500만원미만~신규가입회원) , 99:탈퇴신청회원 */
   startDate 		datetime default now(),										/* 최초 가입일 */
   lastDate  		datetime default now(),										/* 마지막 접속일 */
-  accountnumber char(15) not null,												/* 계좌번호 (생년월일 6자리 + 난수 6자리) */
-  unique(mid),
-  unique(accountnumber)
+  accountNumber char(15) not null,												/* 계좌번호 (생년월일 6자리 + 난수 6자리) */
+  unique(mid)
 );
 drop table member;
 desc member;

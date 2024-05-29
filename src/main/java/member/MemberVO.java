@@ -11,12 +11,12 @@ public class MemberVO {
 	private String address;
 	private String email;
 	private String job;
-	private String alarm;
+	private String message;
 	private String userDel;
 	private int level;
 	private String startDate;
 	private String lastDate;
-	private String accountnumber;
+	private String accountNumber;
 	
 	public int getIdx() {
 		return idx;
@@ -78,11 +78,11 @@ public class MemberVO {
 	public void setJob(String job) {
 		this.job = job;
 	}
-	public String getAlarm() {
-		return alarm;
+	public String getMessage() {
+		return message;
 	}
-	public void setAlarm(String alarm) {
-		this.alarm = alarm;
+	public void setMessage(String message) {
+		this.message = message;
 	}
 	public String getUserDel() {
 		return userDel;
@@ -108,19 +108,18 @@ public class MemberVO {
 	public void setLastDate(String lastDate) {
 		this.lastDate = lastDate;
 	}
-	public String getAccountnumber() {
-		return accountnumber;
+	public String getAccountNumber() {
+		return accountNumber;
 	}
-	public void setAccountnumber(String accountnumber) {
-		this.accountnumber = accountnumber;
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
 	}
+	
 	@Override
 	public String toString() {
 		return "MemberVO [idx=" + idx + ", mid=" + mid + ", pwd=" + pwd + ", name=" + name + ", gender=" + gender
 				+ ", birth=" + birth + ", tel=" + tel + ", address=" + address + ", email=" + email + ", job=" + job
-				+ ", alarm=" + alarm + ", userDel=" + userDel + ", level=" + level + ", startDate=" + startDate + ", lastDate="
-				+ lastDate + ", accountnumber=" + accountnumber + "]";
+				+ ", message=" + message + ", userDel=" + userDel + ", level=" + level + ", startDate=" + startDate
+				+ ", lastDate=" + lastDate + ", accountNumber=" + accountNumber + "]";
 	}
-	
-
 }
